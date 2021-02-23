@@ -1,0 +1,403 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+   
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+   
+   
+  /*
+    AppBar
+  */
+   
+  .app-bar {
+    padding: 8px 16px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+   
+  .app-bar .app-bar__menu {
+    display: flex;
+    align-items: center;
+  }
+   
+  .app-bar .app-bar__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+  }
+   
+  .app-bar .app-bar__brand {
+    display: flex;
+    align-items: center;
+  }
+   
+  .app-bar .app-bar__brand h1 {
+    color: #db0000;
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+  }
+   
+  .app-bar .app-bar__navigation {
+    position: absolute;
+    top: 50px;
+    left: -180px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 8px;
+    background-color: white;
+    overflow: hidden;
+  }
+   
+  .app-bar .app-bar__navigation.open {
+    left: 0;
+  }
+   
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 44px;
+  }
+   
+  /*
+    Main Content
+  */
+   
+  main {
+    padding: 32px;
+    flex: 1;
+  }
+   
+  .content {
+    margin: 0 auto;
+    min-height: 100%;
+  }
+   
+  .content .content__heading {
+    font-weight: normal;
+  }
+   
+   
+  /*
+    restaurants
+  */
+   
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 32px 0;
+  }
+   
+   
+  /*
+    restaurant Item
+  */
+   
+  .restaurant-item {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+   
+  .restaurant-item__header {
+    position: relative;
+  }
+   
+  .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+    width: 100%;
+    max-height: 150px;
+
+  }
+   
+  .restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+    position: absolute;
+    padding: 8px;
+    bottom: 20px;
+    left: 0;
+    display: inline-block;
+    background-color: black;
+    color: white;
+  }
+   
+  .restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+    margin-left: 10px;
+  }
+   
+  .restaurant-item .restaurant-item__content {
+    padding: 16px;
+  }
+   
+  .restaurant-item .restaurant-item__content h3 {
+    margin: 0 0 10px 0;
+  }
+   
+  .restaurant-item .restaurant-item__content h3 a {
+    color: #db0000;
+    text-decoration: none;
+    width: 100%;
+    height: 44px;
+    display: block;
+  }
+   
+  .restaurant-item .restaurant-item__content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+   
+   
+  /*
+    restaurant
+  */
+   
+  .restaurant {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+  }
+   
+  .restaurant .restaurant__poster {
+    width: 100%;
+    max-width: 400px;
+
+  }
+   
+  .restaurant .restaurant__info h4 {
+    margin: 8px 0;
+  }
+   
+   
+   
+  /*
+    Footer
+  */
+   
+  footer {
+    padding: 16px;
+  }
+   
+  footer p {
+    text-align: center;
+    color: #aaaaaa;
+  }
+   
+  footer p a {
+    color: #db0000;
+    text-decoration: none;
+    width: 100%;
+    height: 44px;
+    display: block;
+  }
+
+  /*
+   Like
+*/
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-height: 400px;
+  /* max-width: 1000px; */
+  /* position: relative; */
+  position: absolute;
+    width: 100%;
+    left: 0;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+      opacity: .4
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+      opacity: .4
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
+.banner-img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  display: hide;
+}
+
+.skip-link:focus{
+  display: block;
+  top: 0px;
+}
+
+.space-banner {
+  margin-top: 250px;
+}
